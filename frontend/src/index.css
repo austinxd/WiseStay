@@ -3,12 +3,20 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply text-gray-900 bg-white;
-    font-family: 'Inter', system-ui, sans-serif;
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sora', 'Inter', system-ui, sans-serif;
+  body {
+    @apply text-navy-900 bg-white;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+  h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  ::selection {
+    @apply bg-accent-200 text-navy-900;
   }
 }
 
@@ -16,4 +24,22 @@
   .container-page {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-accent-500 to-accent-600;
+  }
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-elevated hover:-translate-y-1;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: slideUp 0.5s ease-out both;
+  }
+  .animate-in-delay-1 { animation-delay: 0.1s; }
+  .animate-in-delay-2 { animation-delay: 0.2s; }
+  .animate-in-delay-3 { animation-delay: 0.3s; }
 }

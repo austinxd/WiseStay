@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react';
 
-interface CardProps { children: ReactNode; className?: string; onClick?: () => void }
+interface CardProps { children: ReactNode; className?: string; onClick?: () => void; hover?: boolean }
 
-export function Card({ children, className = '', onClick }: CardProps) {
+export function Card({ children, className = '', onClick, hover = false }: CardProps) {
   return (
     <div
-      className={`bg-white rounded-xl border border-gray-200 shadow-sm ${onClick ? 'cursor-pointer hover:shadow-md transition-shadow' : ''} ${className}`}
+      className={`bg-white rounded-2xl border border-gray-100 shadow-soft ${hover || onClick ? 'card-hover cursor-pointer' : ''} ${className}`}
       onClick={onClick}
     >
       {children}
@@ -14,9 +14,9 @@ export function Card({ children, className = '', onClick }: CardProps) {
 }
 
 export function CardHeader({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <div className={`px-6 py-4 border-b border-gray-100 ${className}`}>{children}</div>;
+  return <div className={`px-6 py-5 border-b border-gray-50 ${className}`}>{children}</div>;
 }
 
 export function CardContent({ children, className = '' }: { children: ReactNode; className?: string }) {
-  return <div className={`px-6 py-4 ${className}`}>{children}</div>;
+  return <div className={`px-6 py-5 ${className}`}>{children}</div>;
 }
