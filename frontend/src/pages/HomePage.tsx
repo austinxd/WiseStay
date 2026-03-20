@@ -93,7 +93,14 @@ export function HomePage() {
               </div>
             </div>
           </div>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-8 text-white/50 text-sm">
+            <div className="flex items-center gap-2"><Shield className="w-4 h-4" /> Verified Properties</div>
+            <div className="flex items-center gap-2"><Key className="w-4 h-4" /> Smart Lock Access</div>
+            <div className="flex items-center gap-2"><Star className="w-4 h-4" /> 4.9 Average Rating</div>
+          </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </section>
 
       {/* Features Bar */}

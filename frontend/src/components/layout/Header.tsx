@@ -9,6 +9,21 @@ export function Header() {
   const { t } = useTranslation();
   const { isAuthenticated } = useAuthStore();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const headerBg = isHome && !scrolled
+    ? 'bg-transparent'
+    : 'bg-white/80 backdrop-blur-xl border-b border-gray-100 shadow-sm';
+  const textColor = isHome && !scrolled ? 'text-white' : 'text-navy-800';
+  const logoColor = isHome && !scrolled ? 'text-white' : 'text-navy-900';
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-neutral-100">

@@ -22,6 +22,8 @@ export default {
           800: '#262626',
           900: '#171717',
         },
+        success: { 500: '#10b981', 50: '#ecfdf5' },
+        danger: { 500: '#ef4444', 50: '#fef2f2' },
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
