@@ -1,0 +1,341 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Ocurrio un error",
+    "save": "Guardar",
+    "cancel": "Cancelar",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "view": "Ver",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpiar",
+    "apply": "Aplicar",
+    "back": "Volver",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "confirm": "Confirmar",
+    "close": "Cerrar",
+    "yes": "Si",
+    "no": "No",
+    "or": "o",
+    "and": "y",
+    "from": "Desde",
+    "to": "Hasta",
+    "per_night": "por noche",
+    "nights": "noches",
+    "night": "noche",
+    "guests": "huespedes",
+    "guest": "huesped",
+    "bedrooms": "habitaciones",
+    "bedroom": "habitacion",
+    "bathrooms": "banos",
+    "bathroom": "bano",
+    "on_airbnb": "en Airbnb"
+  },
+  "nav": {
+    "home": "Inicio",
+    "properties": "Propiedades",
+    "how_it_works": "Como Funciona",
+    "for_owners": "Para Propietarios",
+    "login": "Iniciar Sesion",
+    "register": "Registrarse",
+    "logout": "Cerrar Sesion",
+    "dashboard": "Panel",
+    "my_trips": "Mis Viajes",
+    "loyalty": "Recompensas",
+    "chat": "Concierge",
+    "profile": "Perfil",
+    "my_properties": "Mis Propiedades",
+    "reservations": "Reservaciones",
+    "revenue": "Ingresos",
+    "payouts": "Pagos",
+    "devices": "Dispositivos"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "RESERVAS DIRECTAS \u00b7 SIN COMISIONES \u00b7 FLORIDA",
+      "title_line1": "La forma inteligente de",
+      "title_line2": "vacacionar en Florida",
+      "subtitle": "Evita las comisiones de Airbnb. Reserva directo y ahorra hasta 17% en cada estancia \u2014 garantizado.",
+      "cta_primary": "Ver propiedades",
+      "cta_secondary": "Publica tu casa"
+    },
+    "stats": {
+      "savings_value": "17%",
+      "savings_label": "ahorro promedio vs Airbnb",
+      "support_value": "24/7",
+      "support_label": "soporte con IA",
+      "access_value": "100%",
+      "access_label": "acceso smart home"
+    },
+    "search": {
+      "location_label": "UBICACION",
+      "location_value": "Florida, USA",
+      "checkin_label": "LLEGADA",
+      "checkin_value": "Agregar fecha",
+      "checkout_label": "SALIDA",
+      "checkout_value": "Agregar fecha",
+      "guests_label": "HUESPEDES",
+      "guests_value": "2 huespedes",
+      "search_button": "Buscar"
+    },
+    "featured": {
+      "title": "Propiedades Destacadas",
+      "subtitle": "Casas vacacionales curadas con ahorros por reserva directa",
+      "view_all": "Ver todas las propiedades"
+    },
+    "how_it_works": {
+      "title": "Como funciona WiseStay",
+      "subtitle": "Reserva directo. Ahorra mas. Vive inteligente.",
+      "step1_title": "Busca directo",
+      "step1_desc": "Explora nuestra coleccion curada de alquileres vacacionales premium en Florida \u2014 sin comisiones de intermediarios.",
+      "step2_title": "Reserva y ahorra 17%",
+      "step2_desc": "Paga directamente al propietario y conserva el 17% que plataformas como Airbnb se llevarian.",
+      "step3_title": "Acceso smart home",
+      "step3_desc": "Obtén entrada sin llave, control de clima y soporte de concierge con IA 24/7."
+    },
+    "cta": {
+      "title": "Listo para ahorrar en tu proximo viaje?",
+      "subtitle": "Unete a miles de viajeros inteligentes que reservan directo y ahorran.",
+      "button": "Ver propiedades"
+    }
+  },
+  "properties": {
+    "title": "Alquileres Vacacionales",
+    "subtitle": "Encuentra tu estancia perfecta en nuestra coleccion curada",
+    "filters": {
+      "type": "Tipo de Propiedad",
+      "type_all": "Todos los Tipos",
+      "type_house": "Casa",
+      "type_apartment": "Apartamento",
+      "type_condo": "Condominio",
+      "type_villa": "Villa",
+      "type_cabin": "Cabana",
+      "type_townhouse": "Casa Adosada",
+      "price_range": "Rango de Precio",
+      "min_price": "Precio Minimo",
+      "max_price": "Precio Maximo",
+      "bedrooms": "Habitaciones",
+      "any": "Cualquiera",
+      "amenities": "Amenidades",
+      "clear_filters": "Limpiar Filtros"
+    },
+    "card": {
+      "save_per_night": "Ahorra ${{amount}}/noche",
+      "view_details": "Ver Detalles",
+      "per_night": "/ noche"
+    },
+    "empty": {
+      "title": "No se encontraron propiedades",
+      "description": "Intenta ajustar tus filtros o criterios de busqueda"
+    },
+    "detail": {
+      "overview": "Descripcion",
+      "amenities": "Amenidades",
+      "location": "Ubicacion",
+      "reviews": "Resenas",
+      "host": "Tu Anfitrion",
+      "book_now": "Reservar Ahora",
+      "check_availability": "Ver Disponibilidad",
+      "select_dates": "Selecciona tus fechas",
+      "price_breakdown": "Desglose de Precio",
+      "nights_total": "{{nights}} noches x {{price}}",
+      "cleaning_fee": "Tarifa de limpieza",
+      "service_fee": "Tarifa de servicio",
+      "taxes": "Impuestos",
+      "total": "Total",
+      "points_earned": "Puntos que ganaras",
+      "instant_book": "Reserva Instantanea",
+      "request_book": "Solicitar Reserva",
+      "airbnb_price": "Precio en Airbnb",
+      "your_savings": "Tu ahorro"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Bienvenido de Nuevo",
+      "subtitle": "Inicia sesion para acceder a tu cuenta y ahorros",
+      "email": "Correo Electronico",
+      "email_placeholder": "tu@ejemplo.com",
+      "password": "Contrasena",
+      "password_placeholder": "Ingresa tu contrasena",
+      "remember_me": "Recordarme",
+      "forgot_password": "Olvidaste tu contrasena?",
+      "submit": "Iniciar Sesion",
+      "no_account": "No tienes una cuenta?",
+      "register_link": "Registrate gratis"
+    },
+    "register": {
+      "title": "Crear Cuenta",
+      "subtitle": "Unete a WiseStay y comienza a ahorrar en cada estancia",
+      "first_name": "Nombre",
+      "last_name": "Apellido",
+      "email": "Correo Electronico",
+      "phone": "Telefono",
+      "password": "Contrasena",
+      "confirm_password": "Confirmar Contrasena",
+      "role": "Quiero",
+      "role_guest": "Reservar alquileres vacacionales",
+      "role_owner": "Publicar mis propiedades",
+      "terms": "Acepto los Terminos de Servicio y Politica de Privacidad",
+      "submit": "Crear Cuenta",
+      "have_account": "Ya tienes una cuenta?",
+      "login_link": "Inicia sesion"
+    }
+  },
+  "dashboard": {
+    "welcome": "Bienvenido, {{name}}!",
+    "guest": {
+      "upcoming_trips": "Proximos Viajes",
+      "no_upcoming": "Sin viajes proximos",
+      "book_now": "Reserva tu proxima aventura",
+      "points_balance": "Balance de Puntos",
+      "current_tier": "Nivel Actual",
+      "member_since": "Miembro desde",
+      "recent_activity": "Actividad Reciente",
+      "quick_actions": "Acciones Rapidas",
+      "browse_properties": "Explorar Propiedades",
+      "view_rewards": "Ver Recompensas",
+      "contact_support": "Contactar Soporte",
+      "total_saved": "Total Ahorrado"
+    },
+    "owner": {
+      "total_revenue": "Ingresos Totales",
+      "this_month": "Este Mes",
+      "occupancy_rate": "Tasa de Ocupacion",
+      "active_properties": "Propiedades Activas",
+      "pending_payouts": "Pagos Pendientes",
+      "recent_reservations": "Reservaciones Recientes",
+      "performance": "Resumen de Rendimiento",
+      "revenue_chart": "Tendencia de Ingresos"
+    }
+  },
+  "loyalty": {
+    "title": "WiseStay Rewards",
+    "points_balance": "Balance de Puntos",
+    "current_tier": "Nivel Actual",
+    "points_to_next": "{{points}} puntos para {{tier}}",
+    "tier_progress": "Progreso de Nivel",
+    "benefits": {
+      "title": "Tus Beneficios",
+      "discount": "{{percent}}% de descuento en reservas",
+      "early_checkin": "Check-in anticipado",
+      "late_checkout": "Check-out tardio",
+      "priority_support": "Soporte prioritario",
+      "free_upgrades": "Upgrades gratis cuando esten disponibles",
+      "exclusive_access": "Acceso exclusivo a nuevas propiedades"
+    },
+    "history": {
+      "title": "Historial de Puntos",
+      "earned": "Ganados",
+      "redeemed": "Canjeados",
+      "expired": "Expirados",
+      "date": "Fecha",
+      "description": "Descripcion",
+      "points": "Puntos"
+    },
+    "redeem": {
+      "title": "Canjear Puntos",
+      "subtitle": "Usa tus puntos en tu proxima reserva",
+      "available": "Puntos Disponibles",
+      "redeem_button": "Canjear Ahora"
+    },
+    "referral": {
+      "title": "Refiere Amigos",
+      "subtitle": "Comparte tu codigo y gana puntos extra",
+      "your_code": "Tu Codigo de Referido",
+      "copy": "Copiar",
+      "copied": "Copiado!",
+      "earnings": "Ganancias por Referidos",
+      "successful": "Referidos Exitosos"
+    },
+    "tiers": {
+      "bronze": "Bronce",
+      "silver": "Plata",
+      "gold": "Oro",
+      "platinum": "Platino"
+    }
+  },
+  "trips": {
+    "title": "Mis Viajes",
+    "tabs": {
+      "upcoming": "Proximos",
+      "past": "Pasados",
+      "cancelled": "Cancelados"
+    },
+    "empty": {
+      "upcoming": "Sin viajes proximos",
+      "past": "Sin viajes pasados",
+      "cancelled": "Sin viajes cancelados",
+      "cta": "Comienza a planificar tu proxima aventura"
+    },
+    "card": {
+      "check_in": "Llegada",
+      "check_out": "Salida",
+      "confirmation": "Confirmacion #",
+      "view_details": "Ver Detalles",
+      "cancel": "Cancelar Viaje"
+    },
+    "detail": {
+      "trip_details": "Detalles del Viaje",
+      "property_info": "Informacion de la Propiedad",
+      "payment_info": "Informacion de Pago",
+      "access_info": "Informacion de Acceso",
+      "access_code": "Tu Codigo de Acceso",
+      "check_in_instructions": "Instrucciones de Check-in",
+      "need_help": "Necesitas Ayuda?",
+      "contact_host": "Contactar Anfitrion",
+      "contact_support": "Contactar Soporte"
+    }
+  },
+  "booking": {
+    "title": "Completa Tu Reserva",
+    "step_dates": "Fechas",
+    "step_guests": "Huespedes",
+    "step_payment": "Pago",
+    "step_confirm": "Confirmar",
+    "summary": "Resumen de Reserva",
+    "pay_now": "Pagar Ahora",
+    "processing": "Procesando...",
+    "success": {
+      "title": "Reserva Confirmada!",
+      "subtitle": "Tu reservacion ha sido confirmada. Revisa tu correo para los detalles.",
+      "confirmation": "Numero de Confirmacion",
+      "view_trip": "Ver Detalles del Viaje"
+    },
+    "error": {
+      "unavailable": "Estas fechas ya no estan disponibles",
+      "payment_failed": "El pago fallo. Por favor intenta de nuevo."
+    }
+  },
+  "footer": {
+    "tagline": "Viaja inteligente. Paga menos. Siempre.",
+    "for_guests": "PARA HUESPEDES",
+    "browse_properties": "Explorar Propiedades",
+    "how_it_works": "Como Funciona",
+    "savings_calculator": "Calculadora de Ahorro",
+    "for_owners": "PARA PROPIETARIOS",
+    "list_property": "Publica Tu Propiedad",
+    "owner_dashboard": "Panel de Propietario",
+    "pricing": "Precios",
+    "company": "COMPANIA",
+    "about": "Nosotros",
+    "careers": "Carreras",
+    "contact": "Contacto",
+    "legal": "LEGAL",
+    "privacy": "Privacidad",
+    "terms": "Terminos",
+    "cookies": "Cookies",
+    "copyright": "\u00a9 {{year}} WiseStay. Todos los derechos reservados."
+  },
+  "errors": {
+    "generic": "Algo salio mal. Por favor intenta de nuevo.",
+    "network": "Error de red. Por favor verifica tu conexion.",
+    "unauthorized": "Por favor inicia sesion para continuar.",
+    "forbidden": "No tienes permiso para acceder a este recurso.",
+    "not_found": "El recurso solicitado no fue encontrado.",
+    "validation": "Por favor verifica tu informacion e intenta de nuevo."
+  }
+}

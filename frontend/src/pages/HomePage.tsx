@@ -1,13 +1,26 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { Search, DollarSign, Trophy, Home, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/Button';
+import { useTranslation } from 'react-i18next';
+import {
+  MapPin,
+  Users,
+  Bed,
+  Bath,
+  Wifi,
+  Car,
+  Waves,
+  ThermometerSun,
+  ArrowRight,
+  Star,
+  Shield,
+  Smartphone,
+  Search,
+} from 'lucide-react';
 import { useProperties } from '@/hooks/useProperties';
-import { CardSkeleton } from '@/components/ui/Skeleton';
 
 export function HomePage() {
+  const { t } = useTranslation();
   const navigate = useNavigate();
-  const [city, setCity] = useState('');
   const [checkIn, setCheckIn] = useState('');
   const [checkOut, setCheckOut] = useState('');
   const [guests, setGuests] = useState('2');
@@ -15,7 +28,6 @@ export function HomePage() {
 
   const handleSearch = () => {
     const params = new URLSearchParams();
-    if (city) params.set('city', city);
     if (checkIn) params.set('check_in', checkIn);
     if (checkOut) params.set('check_out', checkOut);
     if (guests) params.set('guests', guests);
@@ -24,87 +36,231 @@ export function HomePage() {
 
   return (
     <div>
-      {/* Hero */}
-      <section className="relative bg-gradient-to-br from-wisestay-800 to-wisestay-600 text-white">
-        <div className="container-page py-20 md:py-32 text-center">
-          <h1 className="text-4xl md:text-6xl font-heading font-bold mb-4">Premium Vacation Rentals,<br />Without the Markup</h1>
-          <p className="text-lg md:text-xl text-wisestay-100 mb-10 max-w-2xl mx-auto">Book directly. Earn rewards. Experience smart living.</p>
+      {/* Compact Hero + Search */}
+      <section className="bg-neutral-900 py-10 lg:py-14">
+        <div className="container-page">
+          {/* Title */}
+          <div className="text-center mb-8">
+            <h1 className="text-2xl lg:text-3xl font-display font-bold text-white mb-2">
+              Premium Vacation Rentals in Florida
+            </h1>
+            <p className="text-neutral-400">
+              Book direct and save up to 17% vs Airbnb
+            </p>
+          </div>
 
-          {/* Search Bar */}
-          <div className="bg-white rounded-xl shadow-2xl p-4 max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
-              <input type="text" placeholder="Where? (e.g. Miami)" value={city} onChange={e => setCity(e.target.value)} className="px-4 py-3 border border-gray-200 rounded-lg text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-wisestay-300" />
-              <input type="date" placeholder="Check-in" value={checkIn} onChange={e => setCheckIn(e.target.value)} className="px-4 py-3 border border-gray-200 rounded-lg text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-wisestay-300" />
-              <input type="date" placeholder="Check-out" value={checkOut} onChange={e => setCheckOut(e.target.value)} className="px-4 py-3 border border-gray-200 rounded-lg text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-wisestay-300" />
-              <input type="number" min="1" max="16" placeholder="Guests" value={guests} onChange={e => setGuests(e.target.value)} className="px-4 py-3 border border-gray-200 rounded-lg text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-wisestay-300" />
-              <Button size="lg" onClick={handleSearch} className="flex items-center justify-center gap-2"><Search className="w-5 h-5" /> Search</Button>
+          {/* Search Box */}
+          <div className="bg-white rounded-xl p-4 lg:p-5 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 mb-1.5">Check-in</label>
+                <input
+                  type="date"
+                  value={checkIn}
+                  onChange={(e) => setCheckIn(e.target.value)}
+                  className="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-neutral-400"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 mb-1.5">Check-out</label>
+                <input
+                  type="date"
+                  value={checkOut}
+                  onChange={(e) => setCheckOut(e.target.value)}
+                  className="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-neutral-400"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-neutral-500 mb-1.5">Guests</label>
+                <select
+                  value={guests}
+                  onChange={(e) => setGuests(e.target.value)}
+                  className="w-full px-3 py-2.5 bg-neutral-50 border border-neutral-200 rounded-lg text-sm focus:outline-none focus:border-neutral-400"
+                >
+                  {[1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 16].map(n => (
+                    <option key={n} value={n}>{n} {n === 1 ? 'guest' : 'guests'}</option>
+                  ))}
+                </select>
+              </div>
+              <div className="flex items-end">
+                <button
+                  onClick={handleSearch}
+                  className="w-full bg-brand-gold text-white font-medium py-2.5 px-4 rounded-lg hover:bg-opacity-90 transition-colors flex items-center justify-center gap-2"
+                >
+                  <Search className="w-4 h-4" />
+                  Search
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Properties */}
-      <section className="container-page py-16">
-        <div className="flex items-center justify-between mb-8">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold">Featured Stays</h2>
-          <Link to="/properties" className="text-wisestay-600 hover:text-wisestay-700 font-medium text-sm flex items-center gap-1">View all <ArrowRight className="w-4 h-4" /></Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {isLoading ? (
-            Array.from({ length: 6 }).map((_, i) => <CardSkeleton key={i} />)
-          ) : (
-            propertiesData?.results?.slice(0, 6).map(property => (
-              <Link key={property.id} to={`/properties/${property.slug}`} className="group">
-                <div className="bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
-                  <div className="aspect-[4/3] bg-gray-100 overflow-hidden">
-                    {property.images?.[0] && <img src={property.images[0].url} alt={property.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />}
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-gray-900">{property.name}</h3>
-                    <p className="text-sm text-gray-500">{property.city}, {property.state}</p>
-                    <div className="flex items-center gap-3 mt-2 text-sm text-gray-600">
-                      <span>{property.bedrooms} BR</span>
-                      <span>&middot;</span>
-                      <span>{property.max_guests} guests</span>
-                    </div>
-                    <p className="mt-2 font-semibold text-wisestay-700">${property.base_nightly_rate}<span className="text-gray-400 font-normal text-sm"> /night</span></p>
-                  </div>
-                </div>
-              </Link>
-            ))
-          )}
-        </div>
-      </section>
-
-      {/* Why Book Direct */}
-      <section className="bg-gray-50 py-16">
+      {/* Features Bar */}
+      <section className="py-6 border-b border-neutral-100">
         <div className="container-page">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold text-center mb-12">Why Book Direct</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-12">
             {[
-              { icon: DollarSign, title: 'Save Up to 15%', desc: 'No Airbnb service fees. Our prices are lower because you book directly with us.' },
-              { icon: Trophy, title: 'Earn Rewards', desc: 'Every stay earns loyalty points. Redeem for discounts on future trips.' },
-              { icon: Home, title: 'Smart Home Experience', desc: 'Keyless entry, climate control, and an AI concierge — all automated.' },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="bg-white rounded-xl p-8 text-center shadow-sm border border-gray-100">
-                <div className="w-12 h-12 bg-wisestay-50 rounded-xl flex items-center justify-center mx-auto mb-4"><Icon className="w-6 h-6 text-wisestay-600" /></div>
-                <h3 className="font-semibold text-lg mb-2">{title}</h3>
-                <p className="text-sm text-gray-600">{desc}</p>
+              { icon: Waves, label: 'Pool & Jacuzzi' },
+              { icon: Wifi, label: 'High-Speed WiFi' },
+              { icon: Car, label: 'Free Parking' },
+              { icon: ThermometerSun, label: 'Climate Control' },
+            ].map(({ icon: Icon, label }) => (
+              <div key={label} className="flex items-center gap-2 text-neutral-600">
+                <Icon className="w-5 h-5" />
+                <span className="text-sm font-medium">{label}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Loyalty Teaser */}
-      <section className="container-page py-16">
-        <div className="bg-gradient-to-r from-wisestay-600 to-wisestay-800 rounded-2xl p-8 md:p-12 text-white text-center">
-          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-3">WiseStay Rewards</h2>
-          <p className="text-wisestay-100 mb-2">Bronze &rarr; Silver &rarr; Gold &rarr; Platinum</p>
-          <p className="text-wisestay-200 mb-6 max-w-lg mx-auto">Earn points. Unlock perks. Save more with every stay.</p>
-          <div className="flex items-center justify-center gap-4">
-            <Link to="/loyalty-program"><Button variant="outline" className="border-white text-white hover:bg-white/10">Learn More</Button></Link>
-            <Link to="/register"><Button className="bg-white text-wisestay-700 hover:bg-wisestay-50">Sign Up Free</Button></Link>
+      {/* Properties Grid */}
+      <section className="py-12 lg:py-16">
+        <div className="container-page">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-neutral-900">
+              {t('home.featured.title')}
+            </h2>
+            <Link
+              to="/properties"
+              className="hidden md:flex items-center gap-2 text-neutral-600 hover:text-neutral-900 font-medium transition-colors"
+            >
+              View all
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {isLoading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {Array.from({ length: 8 }).map((_, i) => (
+                <div key={i} className="card animate-pulse">
+                  <div className="h-48 bg-neutral-200" />
+                  <div className="p-4 space-y-3">
+                    <div className="h-4 bg-neutral-200 rounded w-3/4" />
+                    <div className="h-3 bg-neutral-200 rounded w-1/2" />
+                    <div className="h-3 bg-neutral-200 rounded w-1/4" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              {propertiesData?.results?.slice(0, 8).map((property) => (
+                <Link
+                  key={property.id}
+                  to={`/properties/${property.slug}`}
+                  className="card group"
+                >
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    {property.images?.[0] ? (
+                      <img
+                        src={property.images[0].url}
+                        alt={property.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-neutral-200 flex items-center justify-center">
+                        <MapPin className="w-10 h-10 text-neutral-400" />
+                      </div>
+                    )}
+                    {/* Price Badge */}
+                    <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-sm px-2.5 py-1 rounded-lg shadow-sm">
+                      <span className="font-bold text-neutral-900">${property.base_nightly_rate}</span>
+                      <span className="text-neutral-500 text-xs"> /night</span>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-4">
+                    <h3 className="font-semibold text-neutral-900 mb-1 group-hover:text-brand-gold transition-colors line-clamp-1">
+                      {property.name}
+                    </h3>
+                    <div className="flex items-center gap-1 text-neutral-500 text-sm mb-3">
+                      <MapPin className="w-3.5 h-3.5" />
+                      <span>{property.city}, {property.state}</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-xs text-neutral-600">
+                      <span className="flex items-center gap-1">
+                        <Bed className="w-3.5 h-3.5" />
+                        {property.bedrooms} BR
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Bath className="w-3.5 h-3.5" />
+                        {property.bathrooms} BA
+                      </span>
+                      <span className="flex items-center gap-1">
+                        <Users className="w-3.5 h-3.5" />
+                        {property.max_guests}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          )}
+
+          <div className="text-center mt-8 md:hidden">
+            <Link to="/properties" className="btn-secondary">
+              View all properties
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Book Direct */}
+      <section className="py-12 lg:py-16 bg-neutral-50">
+        <div className="container-page">
+          <h2 className="text-2xl lg:text-3xl font-display font-bold text-neutral-900 text-center mb-10">
+            Why Book Direct?
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {[
+              {
+                icon: Star,
+                title: 'Save 17%',
+                desc: 'No platform fees. Pay the owner directly and keep more money in your pocket.',
+              },
+              {
+                icon: Shield,
+                title: 'Secure Booking',
+                desc: 'Protected payments and verified properties for peace of mind.',
+              },
+              {
+                icon: Smartphone,
+                title: 'Smart Access',
+                desc: 'Keyless entry, climate control, and 24/7 support via our app.',
+              },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="text-center">
+                <div className="w-14 h-14 bg-white rounded-xl shadow-card flex items-center justify-center mx-auto mb-4">
+                  <Icon className="w-6 h-6 text-brand-gold" />
+                </div>
+                <h3 className="font-semibold text-neutral-900 mb-2">{title}</h3>
+                <p className="text-neutral-500 text-sm leading-relaxed">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-12 lg:py-16">
+        <div className="container-page">
+          <div className="bg-neutral-900 rounded-2xl p-8 lg:p-12 text-center">
+            <h2 className="text-2xl lg:text-3xl font-display font-bold text-white mb-3">
+              Ready to book your next getaway?
+            </h2>
+            <p className="text-neutral-400 mb-6 max-w-xl mx-auto">
+              Browse our collection of premium vacation rentals and start saving today.
+            </p>
+            <Link to="/properties" className="btn-gold">
+              Browse Properties
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
           </div>
         </div>
       </section>

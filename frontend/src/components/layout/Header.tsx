@@ -1,51 +1,151 @@
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Phone } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useAuthStore } from '@/stores/authStore';
-import { Button } from '@/components/ui/Button';
+import { LanguageSelector } from '@/components/ui/LanguageSelector';
 
 export function Header() {
+  const { t } = useTranslation();
   const { isAuthenticated } = useAuthStore();
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-40">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+    <header className="sticky top-0 z-50 bg-white border-b border-neutral-100">
+      <div className="container-page">
+        <div className="flex items-center justify-between h-16 lg:h-20">
+          {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-2xl font-heading font-bold text-wisestay-600">WiseStay</span>
+            <span className="text-2xl font-display font-bold text-neutral-900">
+              Wise<span className="text-brand-gold">Stay</span>
+            </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-6">
-            <Link to="/properties" className="text-sm font-medium text-gray-600 hover:text-wisestay-600">Properties</Link>
-            <Link to="/loyalty-program" className="text-sm font-medium text-gray-600 hover:text-wisestay-600">Rewards</Link>
-            {isAuthenticated ? (
-              <Link to="/dashboard"><Button size="sm">Dashboard</Button></Link>
-            ) : (
-              <div className="flex items-center gap-3">
-                <Link to="/login"><Button variant="ghost" size="sm">Log in</Button></Link>
-                <Link to="/register"><Button size="sm">Sign up</Button></Link>
-              </div>
-            )}
+          {/* Desktop Navigation */}
+          <nav className="hidden lg:flex items-center gap-8">
+            <Link
+              to="/properties"
+              className="text-neutral-600 hover:text-neutral-900 font-medium transition-colors"
+            >
+              {t('nav.properties')}
+            </Link>
+            <Link
+              to="/how-it-works"
+              className="text-neutral-600 hover:text-neutral-900 font-medium transition-colors"
+            >
+              {t('nav.how_it_works')}
+            </Link>
+            <Link
+              to="/for-owners"
+              className="text-neutral-600 hover:text-neutral-900 font-medium transition-colors"
+            >
+              {t('nav.for_owners')}
+            </Link>
           </nav>
 
-          <button className="md:hidden p-2" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
+          {/* Right side */}
+          <div className="hidden lg:flex items-center gap-4">
+            {/* Contact */}
+            <a
+              href="tel:+13055551234"
+              className="flex items-center gap-2 text-neutral-600 hover:text-neutral-900 transition-colors"
+            >
+              <Phone className="w-4 h-4" />
+              <span className="font-medium">+1 (305) 555-1234</span>
+            </a>
 
-        {menuOpen && (
-          <div className="md:hidden py-4 border-t space-y-3">
-            <Link to="/properties" className="block text-sm font-medium text-gray-600 py-2" onClick={() => setMenuOpen(false)}>Properties</Link>
-            <Link to="/loyalty-program" className="block text-sm font-medium text-gray-600 py-2" onClick={() => setMenuOpen(false)}>Rewards</Link>
+            <div className="w-px h-6 bg-neutral-200" />
+
+            <LanguageSelector />
+
             {isAuthenticated ? (
-              <Link to="/dashboard" onClick={() => setMenuOpen(false)}><Button className="w-full">Dashboard</Button></Link>
+              <Link to="/dashboard" className="btn-primary">
+                {t('nav.dashboard')}
+              </Link>
             ) : (
-              <div className="space-y-2">
-                <Link to="/login" onClick={() => setMenuOpen(false)}><Button variant="outline" className="w-full">Log in</Button></Link>
-                <Link to="/register" onClick={() => setMenuOpen(false)}><Button className="w-full">Sign up</Button></Link>
+              <div className="flex items-center gap-3">
+                <Link
+                  to="/login"
+                  className="text-neutral-600 hover:text-neutral-900 font-medium transition-colors"
+                >
+                  {t('nav.login')}
+                </Link>
+                <Link to="/register" className="btn-primary">
+                  {t('nav.register')}
+                </Link>
               </div>
             )}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="flex lg:hidden items-center gap-3">
+            <LanguageSelector />
+            <button
+              className="p-2 text-neutral-600 hover:text-neutral-900"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile menu */}
+        {menuOpen && (
+          <div className="lg:hidden py-4 border-t border-neutral-100">
+            <nav className="space-y-1">
+              <Link
+                to="/properties"
+                className="block px-4 py-3 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50 rounded-lg font-medium"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('nav.properties')}
+              </Link>
+              <Link
+                to="/how-it-works"
+                className="block px-4 py-3 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50 rounded-lg font-medium"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('nav.how_it_works')}
+              </Link>
+              <Link
+                to="/for-owners"
+                className="block px-4 py-3 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50 rounded-lg font-medium"
+                onClick={() => setMenuOpen(false)}
+              >
+                {t('nav.for_owners')}
+              </Link>
+            </nav>
+
+            <div className="h-px bg-neutral-100 my-4" />
+
+            <div className="px-4 space-y-3">
+              {isAuthenticated ? (
+                <Link
+                  to="/dashboard"
+                  onClick={() => setMenuOpen(false)}
+                  className="btn-primary w-full justify-center"
+                >
+                  {t('nav.dashboard')}
+                </Link>
+              ) : (
+                <>
+                  <Link
+                    to="/login"
+                    onClick={() => setMenuOpen(false)}
+                    className="btn-secondary w-full justify-center"
+                  >
+                    {t('nav.login')}
+                  </Link>
+                  <Link
+                    to="/register"
+                    onClick={() => setMenuOpen(false)}
+                    className="btn-primary w-full justify-center"
+                  >
+                    {t('nav.register')}
+                  </Link>
+                </>
+              )}
+            </div>
           </div>
         )}
       </div>

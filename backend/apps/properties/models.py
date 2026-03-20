@@ -66,6 +66,13 @@ class Property(TimeStampedModel):
     cleaning_fee = models.DecimalField(
         max_digits=8, decimal_places=2, default=Decimal("0.00")
     )
+    guests_included = models.PositiveSmallIntegerField(
+        default=2, help_text="Number of guests included in base price"
+    )
+    extra_guest_fee = models.DecimalField(
+        max_digits=8, decimal_places=2, default=Decimal("0.00"),
+        help_text="Price per additional guest beyond guests_included"
+    )
     currency = models.CharField(max_length=3, default="USD")
 
     # Policies

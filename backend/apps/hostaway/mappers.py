@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import logging
 from datetime import date, datetime, time
 from decimal import Decimal, InvalidOperation
@@ -152,6 +154,8 @@ def map_listing_to_property(hostaway_listing: dict, owner_id: int, existing_slug
 
     base_rate = _safe_decimal(hostaway_listing.get("price"), "100.00")
     cleaning_fee = _safe_decimal(hostaway_listing.get("cleaningFee"))
+    guests_included = int(hostaway_listing.get("guestsIncluded") or 2)
+    extra_guest_fee = _safe_decimal(hostaway_listing.get("priceForExtraPerson"))
 
     check_in_str = hostaway_listing.get("checkInTimeStart") or hostaway_listing.get("checkInTime")
     check_out_str = hostaway_listing.get("checkOutTime")
@@ -177,6 +181,8 @@ def map_listing_to_property(hostaway_listing: dict, owner_id: int, existing_slug
         "beds": int(hostaway_listing.get("beds") or 1),
         "base_nightly_rate": base_rate,
         "cleaning_fee": cleaning_fee,
+        "guests_included": guests_included,
+        "extra_guest_fee": extra_guest_fee,
         "currency": (hostaway_listing.get("currency") or "USD")[:3],
         "check_in_time": _parse_time(check_in_str, time(16, 0)),
         "check_out_time": _parse_time(check_out_str, time(11, 0)),

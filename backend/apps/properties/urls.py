@@ -1,4 +1,11 @@
-# TODO: Define URL patterns for properties app
-from django.urls import path  # noqa: F401
+from django.urls import include, path
+from rest_framework.routers import DefaultRouter
 
-urlpatterns = []
+from .views import PropertyViewSet
+
+router = DefaultRouter()
+router.register(r"", PropertyViewSet, basename="property")
+
+urlpatterns = [
+    path("", include(router.urls)),
+]

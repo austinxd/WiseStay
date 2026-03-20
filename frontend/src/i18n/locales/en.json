@@ -1,0 +1,341 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "apply": "Apply",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "close": "Close",
+    "yes": "Yes",
+    "no": "No",
+    "or": "or",
+    "and": "and",
+    "from": "From",
+    "to": "To",
+    "per_night": "per night",
+    "nights": "nights",
+    "night": "night",
+    "guests": "guests",
+    "guest": "guest",
+    "bedrooms": "bedrooms",
+    "bedroom": "bedroom",
+    "bathrooms": "bathrooms",
+    "bathroom": "bathroom",
+    "on_airbnb": "on Airbnb"
+  },
+  "nav": {
+    "home": "Home",
+    "properties": "Properties",
+    "how_it_works": "How It Works",
+    "for_owners": "For Owners",
+    "login": "Log In",
+    "register": "Sign Up",
+    "logout": "Log Out",
+    "dashboard": "Dashboard",
+    "my_trips": "My Trips",
+    "loyalty": "Rewards",
+    "chat": "Concierge",
+    "profile": "Profile",
+    "my_properties": "My Properties",
+    "reservations": "Reservations",
+    "revenue": "Revenue",
+    "payouts": "Payouts",
+    "devices": "Smart Devices"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "DIRECT BOOKINGS \u00b7 NO AIRBNB FEES \u00b7 FLORIDA",
+      "title_line1": "The wiser way to",
+      "title_line2": "vacation in Florida",
+      "subtitle": "Skip Airbnb fees. Book direct and save up to 17% on every stay \u2014 guaranteed.",
+      "cta_primary": "Browse properties",
+      "cta_secondary": "List your home"
+    },
+    "stats": {
+      "savings_value": "17%",
+      "savings_label": "avg. savings vs Airbnb",
+      "support_value": "24/7",
+      "support_label": "AI-powered support",
+      "access_value": "100%",
+      "access_label": "smart home access"
+    },
+    "search": {
+      "location_label": "LOCATION",
+      "location_value": "Florida, USA",
+      "checkin_label": "CHECK-IN",
+      "checkin_value": "Add date",
+      "checkout_label": "CHECK-OUT",
+      "checkout_value": "Add date",
+      "guests_label": "GUESTS",
+      "guests_value": "2 guests",
+      "search_button": "Search"
+    },
+    "featured": {
+      "title": "Featured Properties",
+      "subtitle": "Curated vacation homes with direct booking savings",
+      "view_all": "View all properties"
+    },
+    "how_it_works": {
+      "title": "How WiseStay works",
+      "subtitle": "Book direct. Save more. Stay smart.",
+      "step1_title": "Search direct",
+      "step1_desc": "Browse our curated collection of premium Florida vacation rentals \u2014 no middleman fees.",
+      "step2_title": "Book & save 17%",
+      "step2_desc": "Pay the owner directly and keep the 17% that platforms like Airbnb would take.",
+      "step3_title": "Smart home access",
+      "step3_desc": "Get instant keyless entry, climate control, and 24/7 AI concierge support."
+    },
+    "cta": {
+      "title": "Ready to save on your next trip?",
+      "subtitle": "Join thousands of smart travelers who book direct and save.",
+      "button": "Browse properties"
+    }
+  },
+  "properties": {
+    "title": "Vacation Rentals",
+    "subtitle": "Find your perfect stay from our curated collection",
+    "filters": {
+      "type": "Property Type",
+      "type_all": "All Types",
+      "type_house": "House",
+      "type_apartment": "Apartment",
+      "type_condo": "Condo",
+      "type_villa": "Villa",
+      "type_cabin": "Cabin",
+      "type_townhouse": "Townhouse",
+      "price_range": "Price Range",
+      "min_price": "Min Price",
+      "max_price": "Max Price",
+      "bedrooms": "Bedrooms",
+      "any": "Any",
+      "amenities": "Amenities",
+      "clear_filters": "Clear Filters"
+    },
+    "card": {
+      "save_per_night": "Save ${{amount}}/night",
+      "view_details": "View Details",
+      "per_night": "/ night"
+    },
+    "empty": {
+      "title": "No properties found",
+      "description": "Try adjusting your filters or search criteria"
+    },
+    "detail": {
+      "overview": "Overview",
+      "amenities": "Amenities",
+      "location": "Location",
+      "reviews": "Reviews",
+      "host": "Your Host",
+      "book_now": "Book Now",
+      "check_availability": "Check Availability",
+      "select_dates": "Select your dates",
+      "price_breakdown": "Price Breakdown",
+      "nights_total": "{{nights}} nights x {{price}}",
+      "cleaning_fee": "Cleaning fee",
+      "service_fee": "Service fee",
+      "taxes": "Taxes",
+      "total": "Total",
+      "points_earned": "Points you'll earn",
+      "instant_book": "Instant Book",
+      "request_book": "Request to Book",
+      "airbnb_price": "Airbnb price",
+      "your_savings": "Your savings"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to access your account and savings",
+      "email": "Email Address",
+      "email_placeholder": "you@example.com",
+      "password": "Password",
+      "password_placeholder": "Enter your password",
+      "remember_me": "Remember me",
+      "forgot_password": "Forgot password?",
+      "submit": "Sign In",
+      "no_account": "Don't have an account?",
+      "register_link": "Sign up for free"
+    },
+    "register": {
+      "title": "Create Account",
+      "subtitle": "Join WiseStay and start saving on every stay",
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "role": "I want to",
+      "role_guest": "Book vacation rentals",
+      "role_owner": "List my properties",
+      "terms": "I agree to the Terms of Service and Privacy Policy",
+      "submit": "Create Account",
+      "have_account": "Already have an account?",
+      "login_link": "Sign in"
+    }
+  },
+  "dashboard": {
+    "welcome": "Welcome back, {{name}}!",
+    "guest": {
+      "upcoming_trips": "Upcoming Trips",
+      "no_upcoming": "No upcoming trips",
+      "book_now": "Book your next adventure",
+      "points_balance": "Points Balance",
+      "current_tier": "Current Tier",
+      "member_since": "Member since",
+      "recent_activity": "Recent Activity",
+      "quick_actions": "Quick Actions",
+      "browse_properties": "Browse Properties",
+      "view_rewards": "View Rewards",
+      "contact_support": "Contact Support",
+      "total_saved": "Total Saved"
+    },
+    "owner": {
+      "total_revenue": "Total Revenue",
+      "this_month": "This Month",
+      "occupancy_rate": "Occupancy Rate",
+      "active_properties": "Active Properties",
+      "pending_payouts": "Pending Payouts",
+      "recent_reservations": "Recent Reservations",
+      "performance": "Performance Overview",
+      "revenue_chart": "Revenue Trend"
+    }
+  },
+  "loyalty": {
+    "title": "WiseStay Rewards",
+    "points_balance": "Points Balance",
+    "current_tier": "Current Tier",
+    "points_to_next": "{{points}} points to {{tier}}",
+    "tier_progress": "Tier Progress",
+    "benefits": {
+      "title": "Your Benefits",
+      "discount": "{{percent}}% discount on bookings",
+      "early_checkin": "Early check-in",
+      "late_checkout": "Late checkout",
+      "priority_support": "Priority support",
+      "free_upgrades": "Free upgrades when available",
+      "exclusive_access": "Exclusive access to new properties"
+    },
+    "history": {
+      "title": "Points History",
+      "earned": "Earned",
+      "redeemed": "Redeemed",
+      "expired": "Expired",
+      "date": "Date",
+      "description": "Description",
+      "points": "Points"
+    },
+    "redeem": {
+      "title": "Redeem Points",
+      "subtitle": "Use your points on your next booking",
+      "available": "Available Points",
+      "redeem_button": "Redeem Now"
+    },
+    "referral": {
+      "title": "Refer Friends",
+      "subtitle": "Share your code and earn bonus points",
+      "your_code": "Your Referral Code",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "earnings": "Referral Earnings",
+      "successful": "Successful Referrals"
+    },
+    "tiers": {
+      "bronze": "Bronze",
+      "silver": "Silver",
+      "gold": "Gold",
+      "platinum": "Platinum"
+    }
+  },
+  "trips": {
+    "title": "My Trips",
+    "tabs": {
+      "upcoming": "Upcoming",
+      "past": "Past",
+      "cancelled": "Cancelled"
+    },
+    "empty": {
+      "upcoming": "No upcoming trips",
+      "past": "No past trips",
+      "cancelled": "No cancelled trips",
+      "cta": "Start planning your next adventure"
+    },
+    "card": {
+      "check_in": "Check-in",
+      "check_out": "Check-out",
+      "confirmation": "Confirmation #",
+      "view_details": "View Details",
+      "cancel": "Cancel Trip"
+    },
+    "detail": {
+      "trip_details": "Trip Details",
+      "property_info": "Property Information",
+      "payment_info": "Payment Information",
+      "access_info": "Access Information",
+      "access_code": "Your Access Code",
+      "check_in_instructions": "Check-in Instructions",
+      "need_help": "Need Help?",
+      "contact_host": "Contact Host",
+      "contact_support": "Contact Support"
+    }
+  },
+  "booking": {
+    "title": "Complete Your Booking",
+    "step_dates": "Dates",
+    "step_guests": "Guests",
+    "step_payment": "Payment",
+    "step_confirm": "Confirm",
+    "summary": "Booking Summary",
+    "pay_now": "Pay Now",
+    "processing": "Processing...",
+    "success": {
+      "title": "Booking Confirmed!",
+      "subtitle": "Your reservation has been confirmed. Check your email for details.",
+      "confirmation": "Confirmation Number",
+      "view_trip": "View Trip Details"
+    },
+    "error": {
+      "unavailable": "These dates are no longer available",
+      "payment_failed": "Payment failed. Please try again."
+    }
+  },
+  "footer": {
+    "tagline": "Stay wise. Pay less. Always.",
+    "for_guests": "FOR GUESTS",
+    "browse_properties": "Browse Properties",
+    "how_it_works": "How It Works",
+    "savings_calculator": "Savings Calculator",
+    "for_owners": "FOR OWNERS",
+    "list_property": "List Your Property",
+    "owner_dashboard": "Owner Dashboard",
+    "pricing": "Pricing",
+    "company": "COMPANY",
+    "about": "About",
+    "careers": "Careers",
+    "contact": "Contact",
+    "legal": "LEGAL",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "cookies": "Cookies",
+    "copyright": "\u00a9 {{year}} WiseStay. All rights reserved."
+  },
+  "errors": {
+    "generic": "Something went wrong. Please try again.",
+    "network": "Network error. Please check your connection.",
+    "unauthorized": "Please log in to continue.",
+    "forbidden": "You don't have permission to access this resource.",
+    "not_found": "The requested resource was not found.",
+    "validation": "Please check your input and try again."
+  }
+}
