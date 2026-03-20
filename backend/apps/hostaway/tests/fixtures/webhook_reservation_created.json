@@ -1,0 +1,33 @@
+{
+  "event": "reservationCreated",
+  "data": {
+    "id": 77001,
+    "listingMapId": 98765,
+    "channelId": 2002,
+    "channelName": "Booking.com",
+    "source": "Booking.com",
+    "status": "new",
+    "guestName": "Marco Rossi",
+    "guestFirstName": "Marco",
+    "guestLastName": "Rossi",
+    "guestEmail": "marco.rossi@example.it",
+    "guestPhone": "+393401234567",
+    "arrivalDate": "2025-08-01",
+    "departureDate": "2025-08-05",
+    "nights": 4,
+    "numberOfGuests": 2,
+    "adults": 2,
+    "children": 0,
+    "totalPrice": 3830.00,
+    "basePrice": 3580.00,
+    "cleaningFee": 250.00,
+    "hostChannelFee": 573.00,
+    "guestChannelFee": 0,
+    "currency": "USD",
+    "confirmationCode": "3847291056",
+    "channelReservationId": "3847291056",
+    "isPaid": 1,
+    "guestNote": "Late arrival around 9pm, please advise on check-in procedure.",
+    "hostNote": ""
+  }
+}

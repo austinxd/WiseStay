@@ -1,0 +1,5 @@
+export interface LoyaltySummary { tier: string; tier_benefits: TierBenefits; points_balance: number; points_expiring_soon: { amount: number; expires_at: string } | null; direct_bookings_count: number; successful_referrals_count: number; referral_code: string; next_tier: { name: string; reservations_needed: number; referrals_needed: number } | null }
+export interface TierBenefits { discount_percent: number; early_checkin: boolean; late_checkout: boolean; priority_support: boolean }
+export interface PointTransaction { id: number; transaction_type: string; points: number; balance_after: number; description: string; created_at: string; expires_at: string | null }
+export interface TierConfig { tier_name: string; min_reservations: number; min_referrals: number; discount_percent: number; early_checkin: boolean; late_checkout: boolean; priority_support: boolean; sort_order: number }
+export interface ReferralStats { referral_code: string; total_referred: number; completed: number; pending: number; expired: number; total_bonus_points_earned: number; recent_referrals: { name: string; status: string; date: string; points_earned: number }[] }

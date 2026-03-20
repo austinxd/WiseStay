@@ -1,0 +1,2 @@
+export interface OwnerPayout { id: number; period_month: number; period_year: number; gross_revenue: number; commission_amount: number; net_amount: number; commission_rate_applied?: number; status: string; approved_at?: string | null; paid_at: string | null; admin_notes?: string; line_items?: PayoutLineItem[]; created_at?: string }
+export interface PayoutLineItem { guest_name: string; check_in_date: string; check_out_date: string; channel: string; reservation_total: number; commission_amount: number; owner_amount: number }

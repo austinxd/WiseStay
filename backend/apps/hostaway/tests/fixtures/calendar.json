@@ -1,0 +1,18 @@
+[
+  {"date": "2025-07-10", "isAvailable": 1, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-11", "isAvailable": 1, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-12", "isAvailable": 0, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-13", "isAvailable": 0, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-14", "isAvailable": 0, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-15", "isAvailable": 0, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-16", "isAvailable": 0, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-17", "isAvailable": 0, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-18", "isAvailable": 0, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-19", "isAvailable": 0, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-20", "isAvailable": 1, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-21", "isAvailable": 1, "price": 895.00, "minimumStay": 2},
+  {"date": "2025-07-22", "isAvailable": 1, "price": 995.00, "minimumStay": 2},
+  {"date": "2025-07-23", "isAvailable": 0, "price": 995.00, "minimumStay": 2},
+  {"date": "2025-07-24", "isAvailable": 0, "price": 995.00, "minimumStay": 2},
+  {"date": "2025-07-25", "isAvailable": 1, "price": 995.00, "minimumStay": 2}
+]

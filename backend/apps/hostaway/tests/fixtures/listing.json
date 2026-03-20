@@ -1,0 +1,83 @@
+{
+  "id": 98765,
+  "name": "Sunset Villa at Malibu Beach",
+  "externalListingName": "Luxurious Malibu Beachfront Villa",
+  "internalListingName": "Malibu-Villa-01",
+  "description": "Stunning 4-bedroom beachfront villa with panoramic ocean views, private pool, and direct beach access. Perfect for families and groups seeking a luxurious coastal retreat.",
+  "houseRules": "No smoking. No parties. Quiet hours 10pm-8am.",
+  "keyPickup": "Smart lock code provided 48 hours before check-in.",
+  "specialInstruction": "Please remove shoes inside. Pool towels are in the hallway closet.",
+  "propertyTypeId": 4,
+  "country": "United States",
+  "countryCode": "US",
+  "state": "CA",
+  "city": "Malibu",
+  "street": "21500 Pacific Coast Hwy",
+  "address": "21500 Pacific Coast Hwy, Malibu, CA 90265",
+  "zipcode": "90265",
+  "latitude": 34.025922,
+  "longitude": -118.779757,
+  "price": 895.00,
+  "cleaningFee": 250.00,
+  "currency": "USD",
+  "bedrooms": 4,
+  "bathrooms": 3.5,
+  "beds": 5,
+  "maxGuests": 10,
+  "personCapacity": 10,
+  "checkInTimeStart": "16:00",
+  "checkInTimeEnd": "22:00",
+  "checkOutTime": "11:00",
+  "minNights": 2,
+  "maxNights": 30,
+  "isActive": 1,
+  "images": [
+    {
+      "id": 501,
+      "url": "https://img.hostaway.com/listings/98765/main-exterior.jpg",
+      "caption": "Beachfront exterior view",
+      "sortOrder": 0
+    },
+    {
+      "id": 502,
+      "url": "https://img.hostaway.com/listings/98765/living-room.jpg",
+      "caption": "Open-plan living room with ocean views",
+      "sortOrder": 1
+    },
+    {
+      "id": 503,
+      "url": "https://img.hostaway.com/listings/98765/master-bedroom.jpg",
+      "caption": "Master bedroom suite",
+      "sortOrder": 2
+    },
+    {
+      "id": 504,
+      "url": "https://img.hostaway.com/listings/98765/pool-deck.jpg",
+      "caption": "Infinity pool overlooking the Pacific",
+      "sortOrder": 3
+    }
+  ],
+  "listingAmenities": [
+    {"name": "WiFi"},
+    {"name": "Air conditioning"},
+    {"name": "Kitchen"},
+    {"name": "Pool"},
+    {"name": "Hot tub"},
+    {"name": "Free parking on premises"},
+    {"name": "BBQ grill"},
+    {"name": "Smoke alarm"},
+    {"name": "Carbon monoxide alarm"},
+    {"name": "TV"},
+    {"name": "Washer"},
+    {"name": "Dryer"},
+    {"name": "Dishwasher"},
+    {"name": "Coffee maker"},
+    {"name": "Patio or balcony"}
+  ],
+  "bookingEngineUrls": {
+    "airbnb": "https://www.airbnb.com/rooms/12345678",
+    "booking": "https://www.booking.com/hotel/us/malibu-sunset-villa.html"
+  },
+  "seoTitle": "Malibu Beachfront Villa | WiseStay",
+  "seoDescription": "Book this stunning 4BR beachfront villa in Malibu with private pool and ocean views."
+}

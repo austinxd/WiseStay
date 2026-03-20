@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+*.env
+db.sqlite3
+staticfiles/
+media/
+.coverage
+htmlcov/
+.pytest_cache/
+*.log
+
+# Node
+node_modules/
+dist/
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
+
+# Claude
+.claude/
